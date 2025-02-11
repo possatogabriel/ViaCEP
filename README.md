@@ -9,7 +9,7 @@ Desafio final proposto durante o último curso da primeira formação em Java da
 Esse projeto permite que você insira um CEP e receba as informações condizentes com ele (logradouro, bairro, UF...)
 
 > Esse projeto utiliza da <a href = "https://viacep.com.br/"> API da "ViaCEP" </a>
-> - Em adição ao desafio, também, foram implementados **mensagens de erro personalizadas ao inserir um CEP "errado"** *(diferente de 8 caracteres)* ou um **CEP inválido *(99999999, por exemplo)***
+> - Em adição ao desafio, também, foram implementadas **mensagens de erro personalizadas ao inserir um CEP "errado"** *(diferente de 8 caracteres)* ou um **CEP inválido *(99999999, por exemplo)***
 
 ## 💻 Tecnologias Utilizadas
 `Trabalhado durante o curso:`
