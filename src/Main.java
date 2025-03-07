@@ -9,9 +9,10 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner input = new Scanner(System.in);
         var busca = "";
+        var tamanhoCEP = 0;
 
         while (!busca.equalsIgnoreCase("sair")) {
-            System.out.print("Escreva o(s) CEP(s) que você quer consultar (sem hífen)/digite 'SAIR' para encerrar o programa: ");
+            System.out.print("Escreva o(s) CEP(s) que você quer consultar/digite 'SAIR' para encerrar o programa: ");
             busca = input.nextLine();
 
             if (busca.equalsIgnoreCase("sair")) {
@@ -19,11 +20,17 @@ public class Main {
                 break;
             }
 
+            if (busca.contains("-")) {
+                tamanhoCEP = 9;
+            } else {
+                tamanhoCEP = 8;
+            }
+
             System.out.println();
 
             try {
                 var consulta = new Consulta();
-                var informacaoCEP = consulta.buscaCEP(busca);
+                var informacaoCEP = consulta.buscaCEP(busca, tamanhoCEP);
 
                 System.out.println(informacaoCEP);
                 System.out.println();

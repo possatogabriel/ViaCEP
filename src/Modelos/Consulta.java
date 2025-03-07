@@ -12,9 +12,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class Consulta {
-    public CEP buscaCEP(String cep) throws IOException, InterruptedException {
-        if (cep.length() != 8) {
-            throw new CEPException("O tamanho do CEP NÃO pode ser maior do que 8 caracteres, tente novamente!");
+    public CEP buscaCEP(String cep, Integer tamanhoCEP) throws IOException, InterruptedException {
+        if (cep.length() != tamanhoCEP) {
+            throw new CEPException("O tamanho do CEP é inválido, tente novamente!");
         }
 
         var endereco = "https://viacep.com.br/ws/" + cep + "/json/";
